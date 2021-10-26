@@ -82,7 +82,14 @@ function makeRequest (method, url, data) {
 					"https://user-images.githubusercontent.com/43610049/126987703-c8ac0903-fbcf-4505-af96-26af912b7eb1.png"];
     			var image_pick2 = image_url2[Math.floor(Math.random() * image_url2.length)];
 	    		if (image_pick2 === undefined){image_pick2 = "https://user-images.githubusercontent.com/43610049/126987681-8f61965a-c6d0-4b1a-ab1c-623e1513da7f.png"}
-			
+			var promotion_1 = ["https://user-images.githubusercontent.com/84266946/136051903-b528e4c7-b416-4a66-9230-789ab200a8b7.jpg",
+					"https://user-images.githubusercontent.com/84266946/136051899-bb9c1838-3709-4897-9fea-248a85b7590e.jpg",
+					"https://user-images.githubusercontent.com/84266946/136051895-49d904ab-4eb8-4364-a4e4-868c2e01e52a.jpg",
+					"https://user-images.githubusercontent.com/84266946/136051892-2fb4e14c-e4a2-4eb0-9fc0-2f61ffc62787.jpg",
+					"https://user-images.githubusercontent.com/84266946/136051890-f989b0fd-1e2a-483c-a37c-b2ae733b9736.jpg",
+					"https://user-images.githubusercontent.com/84266946/136051883-dca4848d-fc5a-4666-b904-789d1231a255.jpg"
+					];
+        var prom_1pick = random_pick(promotion_1);
 			
 			var text_1 = [	"ไลฟ์คู่เทพ 18+",
                    			"ตามหาคู่เทพ",
@@ -214,7 +221,7 @@ function makeRequest (method, url, data) {
       "direction": "ltr",
       "hero": {
         "type": "image",
-        "url": "https://user-images.githubusercontent.com/84266946/136051895-49d904ab-4eb8-4364-a4e4-868c2e01e52a.jpg",
+        "url": prom_1pick,
         "size": "full",
         "aspectRatio": "1:1",
         "aspectMode": "cover"
