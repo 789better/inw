@@ -1,0 +1,374 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+    <script src="https://static.line-scdn.net/liff/edge/versions/2.6.0/sdk.js"></script>
+
+  </head>
+
+
+  <body>
+<script>
+function random_pick(input){
+      if (!(Array.isArray(input))){return input;}
+      var input_2 = input[Math.floor(Math.random() * input.length)];
+      if (input_2 === undefined){input_2 = input[0];}
+      return input_2;
+    }
+
+
+
+
+		async function getUserProfile() {
+    profile = await liff.getProfile()
+    pictureUrl = profile.pictureUrl
+    userId = profile.userId
+    displayName = profile.displayName
+    decodedIDToken = ''
+    decodedIDToken = liff.getDecodedIDToken().email
+    if (pictureUrl == undefined) {
+        pictureUrl = ''
+    }
+
+		}
+		async function main() {
+		  	var image_url = ["https://user-images.githubusercontent.com/43610049/126987372-f9ec844b-a011-4eff-95b8-8166354f74ca.png",
+					"https://user-images.githubusercontent.com/43610049/126987380-03067f3f-3050-43c9-818e-ffa17677b571.png",
+					"https://user-images.githubusercontent.com/43610049/126987383-b4f99389-a2f7-4a4f-bcad-0f54386e81f7.png",
+					"https://user-images.githubusercontent.com/43610049/126987385-55af4f6e-7387-4728-b9f1-7b46c72c52ce.png",
+					"https://user-images.githubusercontent.com/43610049/126987386-954033ed-64f7-46e8-8530-e05ea30c3cde.png",
+					"https://user-images.githubusercontent.com/43610049/126987387-d8510fe7-5228-486b-b344-56594fe7b407.png",
+					"https://user-images.githubusercontent.com/43610049/126987393-95a45cae-ff96-4e73-ba00-cb0d70f5950e.png",
+					"https://user-images.githubusercontent.com/43610049/126987395-5442a244-7d0c-4ecc-a242-c6a7f063e595.png"];
+    			var image_pick = image_url[Math.floor(Math.random() * image_url.length)];
+	    		if (image_pick === undefined){image_pick = "https://user-images.githubusercontent.com/43610049/126987372-f9ec844b-a011-4eff-95b8-8166354f74ca.png"}
+			
+			var image_url2 = ["https://user-images.githubusercontent.com/43610049/126987681-8f61965a-c6d0-4b1a-ab1c-623e1513da7f.png",
+					"https://user-images.githubusercontent.com/43610049/126987686-d91c1494-8e8e-422c-baf4-cbbbab279306.png",
+					"https://user-images.githubusercontent.com/43610049/126987688-a59dcd1a-cf24-4ce4-9b90-a7eafc2e3c85.png",
+					"https://user-images.githubusercontent.com/43610049/126987689-1bc3799f-5f51-4964-a220-8b3d1a50d08b.png",
+					"https://user-images.githubusercontent.com/43610049/126987690-e7a88d60-b0fd-48ed-990a-9d4bc7e8f46f.png",
+					"https://user-images.githubusercontent.com/43610049/126987692-0b217b52-0f42-4080-b7ff-3e2ee14df2c5.png",
+					"https://user-images.githubusercontent.com/43610049/126987695-1619a914-a11c-483f-93af-173bc30b9b2d.png",
+					"https://user-images.githubusercontent.com/43610049/126987696-05757081-4b86-4f38-9ae8-5069f4812b5e.png",
+					"https://user-images.githubusercontent.com/43610049/126987700-a44df24f-34f8-4333-b505-5bfa54f2081b.png",
+					"https://user-images.githubusercontent.com/43610049/126987701-d78c2bab-9ef1-4a1a-9c46-865c84449424.png",
+					"https://user-images.githubusercontent.com/43610049/126987703-c8ac0903-fbcf-4505-af96-26af912b7eb1.png"];
+    			var image_pick2 = image_url2[Math.floor(Math.random() * image_url2.length)];
+	    		if (image_pick2 === undefined){image_pick2 = "https://user-images.githubusercontent.com/43610049/126987681-8f61965a-c6d0-4b1a-ab1c-623e1513da7f.png"}
+			
+			
+			var text_1 = [	"ไลฟ์คู่เทพ 18+",
+                   			"ตามหาคู่เทพ",
+                   			"รับสมัครเป็นคู่เทพ 1 อัตรา",
+                   			"คู่เทพ",
+                   			"ดูไลฟ์คู้เทพ จัดสด"]
+          		var text_1pick = random_pick(text_1);
+			
+			var text_2 = [	"ไลฟ์สด18+ เข้าฟรี",
+                   			"เข้าไลฟ์ฟรีสิ้นเดือนนี้",
+                   			"ครบ 1 แสนซับ ไลฟ์เข้าฟรี",
+                   			"วิดิโอคอลกับสาว ไลฟ์VIP",
+                   			"เปิดไลฟ์ฟรี จำนวนจำกัด"]
+          		var text_2pick = random_pick(text_2);
+			
+			var text_3 = [	"789BT : ฉลองครบ 1 แสนซับ",
+                   			"789BT : คืนกำไรให้ทุกท่าน",
+                   			"789BT : แชร์แล้วเข้ากลุ่มไลฟ์",
+                   			"789BT : เตรียมเปิดกลุ่มคอลส่วนตัว",
+                   			"789BT : เข้าฟรี จำนวนจำกัด"]
+          		var text_3pick = random_pick(text_3);
+			
+			var text_4 = [	"SEXY บาคาร่า @789BT",
+                   			"SA Game @789BT",
+                   			"Big Gaming @789BT",
+                   			"eBET @789BT",
+                   			"Allbet @789BT",
+                   			"PG SLOT @789BT",
+                   			"Asia Gaming @789BT",
+                   			"KINGMAKER @789BT",
+                   			"FC SLOT @789BT",
+                   			"AMEBA @789BT",
+                   			"DRAGOONSOFT @789BT",
+                   			"FC SLOT @789BT",
+                   			"EVO PLAY @789BT",
+                   			"Pragmatic @789BT"]
+          		var text_4pick = random_pick(text_4);
+			
+			var text_5 = [	"เกมส์ หวย กีฬา คาสิโน ระบบอัตโนมัติ",
+                   			"10 ค่ายคาสิโน && 20 ค่ายสล็อต",
+                   			"โปรโมชั่น แจกโบนัสคูณ 2",
+                   			"สมัครใหม่ 300 รับ 400 ด่วน!!",
+                   			"สนุกทุกการเล่น จ่ายเต็มทุกยอด",
+                   			"ชวนเพื่อน ผ่านลิงค์รับทรัพย์",
+                   			"มียอดฝากเข้ากลุ่มไลฟ์ VIP ฟรี",
+                   			"ไม่ต้องโยกเงิน เสถียรที่สุด เล่นง่าย"]
+          		var text_5pick = random_pick(text_5);
+			
+			liff.ready.then(() => {
+        if (liff.isLoggedIn()) {
+            getUserProfile()
+        } else {
+            liff.login()
+        }
+    })
+			await liff.init({ liffId: "1655543836-wKeJMa99"})
+			await liff.shareTargetPicker([
+			{
+				type: "flex",
+				altText: text_1pick,
+				contents: 
+				
+				{
+  "type": "carousel",
+  "contents": [
+    {
+      "type": "bubble",
+      "direction": "ltr",
+      "hero": {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/Eu__pTpUYAMcfiW.jpg",
+        "size": "full",
+        "aspectRatio": "1.4:1",
+        "aspectMode": "cover"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "spacing": "lg",
+        "contents": [
+          {
+            "type": "text",
+            "text": "สมัครเป็นคู่เทพง่ายๆ ",
+            "weight": "bold",
+            "size": "xl",
+            "color": "#FFFFFFFF",
+            "align": "center",
+            "contents": []
+          },
+          {
+            "type": "text",
+            "text": "แชร์เข้ากลุ่มเป็นคู่เทพ",
+            "color": "#E2FF00FF",
+            "contents": []
+          }
+        ]
+      },
+      "footer": {
+        "type": "box",
+        "layout": "vertical",
+        "spacing": "md",
+        "position": "default",
+        "paddingTop": "sm",
+        "contents": [
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "แชร์เข้ากลุ่มเทพฟรี",
+              "uri": "https://liff.line.me/1655543836-wKeJMa99"
+            },
+            "style": "primary"
+          },
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "เข้ากลุ่มไลฟ์คู่เทพ",
+              "uri": "https://linecorp.com"
+            },
+            "style": "secondary"
+          }
+        ]
+      },
+      "styles": {
+        "body": {
+          "backgroundColor": "#000000FF"
+        },
+        "footer": {
+          "backgroundColor": "#000000FF"
+        }
+      }
+    },
+    {
+      "type": "bubble",
+      "direction": "ltr",
+      "hero": {
+        "type": "image",
+        "url": "https://user-images.githubusercontent.com/84266946/136051895-49d904ab-4eb8-4364-a4e4-868c2e01e52a.jpg",
+        "size": "full",
+        "aspectRatio": "1:1",
+        "aspectMode": "cover"
+      },
+      "footer": {
+        "type": "box",
+        "layout": "vertical",
+        "spacing": "xl",
+        "margin": "none",
+        "contents": [
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "สมัครสมาชิกใหม่",
+              "uri": "https://aff.789bt.net/aff/8mdco/21790tr/line"
+            },
+            "color": "#FF2A2AFF",
+            "style": "primary"
+          },
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "ฝากรับเครดิต",
+              "uri": "https://789bt.net"
+            },
+            "style": "secondary"
+          }
+        ]
+      },
+      "styles": {
+        "footer": {
+          "backgroundColor": "#000000FF"
+        }
+      }
+    },
+    {
+      "type": "bubble",
+      "direction": "ltr",
+      "hero": {
+        "type": "image",
+        "url": image_pick2,
+        "size": "full",
+        "aspectRatio": "1.4:1",
+        "aspectMode": "cover"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "spacing": "lg",
+        "contents": [
+          {
+            "type": "text",
+            "text": text_4pick,
+            "weight": "bold",
+            "size": "xl",
+            "color": "#2DFF00FF",
+            "align": "center",
+            "contents": []
+          },
+          {
+            "type": "text",
+            "text": text_5pick,
+            "color": "#FFFFFFFF",
+            "contents": []
+          }
+        ]
+      },
+      "footer": {
+        "type": "box",
+        "layout": "vertical",
+        "spacing": "md",
+        "margin": "none",
+        "contents": [
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "สมัครสมาชิกใหม่",
+              "uri": "https://aff.789bt.net/aff/8mdco/21790tr/line"
+            },
+            "style": "primary"
+          },
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "ทางเข้าเล่น",
+              "uri": "https://789bt.net"
+            },
+            "style": "secondary"
+          }
+        ]
+      },
+      "styles": {
+        "body": {
+          "backgroundColor": "#000000FF"
+        },
+        "footer": {
+          "backgroundColor": "#000000FF"
+        }
+      }
+    }
+  ]
+}
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				}
+			]).then(async function (res) {
+      if (res) {
+        // succeeded in sending a message through TargetPicker
+        // console.log(`[${res.status}] Message sent!`)
+	 /* if (liff.getContext().type !== "none" && liff.getContext().type !== "external") {
+    await liff.sendMessages([
+      {
+        "type": "text",
+        "text": "แชร์แล้ว ขอบคุณค่ะ"
+      }
+    ])
+    // $('#demo').html('แชร์สำเร็จ สิ้นสุดการแชร์ กรุณารอสักครู่')
+  }*/
+	// await makeRequest('GET', "https://script.google.com/macros/s/AKfycbwLOzsRg5iw7OVQHGjwcO0Fk-xxH0xR96HvXdGUWBu8dYZuv7mqaa0jrGMpDZQ7-REBcQ/exec?userId=" + userId + "&name=" + displayName +"&decode=" + decodedIDToken +"&pictureUrl=0")
+        await liff.closeWindow()
+      } else {
+        const [majorVer, minorVer] = (liff.getLineVersion() || "").split('.');
+        if (parseInt(majorVer) == 10 && parseInt(minorVer) < 11) {
+          // LINE 10.3.0 - 10.10.0
+          // Old LINE will access here regardless of user's action
+          // $('#demo').html('เกิดข้อผิดพลาด ระบบไม่นับการแชร์ โปรดอัพเดท LINE ให้เป็นเวอร์ชั่นล่าสุด')
+		await liff.closeWindow()
+	
+        } else {
+          // LINE 10.11.0 -
+          // sending message canceled
+          // $('#demo').html('การแชร์สิ้นสุด ระบบจะไม่นับการแชร์')
+		await liff.closeWindow()
+        }
+      }
+    }).catch(function (error) {
+      // something went wrong before sending a message
+      // $('#demo').html('ระบบกำลังปิดหน้าต่างอัตโนมัติ')
+	setTimeout(function() {liff.closeWindow()}, 500);
+    })	
+			// await liff.closeWindow()
+		
+
+		}
+
+
+
+
+
+$(document).ready(function() {
+	  main();
+});
+
+</script>
+
+  </body>
+</html>
