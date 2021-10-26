@@ -115,73 +115,138 @@ function random_pick(input){
             liff.login()
         }
     })
-			await liff.init({ liffId: "1655543836-wKeJMa99"})
-      console.log(text_1pick+text_5pick)
+			await liff.init({ liffId: "1655543836-yOnMj1EE"})
 			await liff.shareTargetPicker([
 			{
 				type: "flex",
-				altText: "555",
+				altText: text_1pick,
 				contents: 
 				
 				{
-  "type": "bubble",
-  "direction": "ltr",
-  "hero": {
-    "type": "image",
-    "url": "https://pbs.twimg.com/media/Eu__pTpUYAMcfiW.jpg",
-    "size": "full",
-    "aspectRatio": "1.4:1",
-    "aspectMode": "cover"
-  },
-  "body": {
-    "type": "box",
-    "layout": "vertical",
-    "spacing": "lg",
-    "contents": [
-      {
-        "type": "text",
-        "text": "สมัครเป็นคู่เทพง่ายๆ ",
-        "weight": "bold",
-        "size": "xl",
-        "color": "#FFFFFFFF",
-        "align": "center",
-        "contents": []
+  "type": "carousel",
+  "contents": [
+    {
+      "type": "bubble",
+      "hero": {
+        "type": "image",
+        "url": image_pick,
+        "size": "full",
+        "aspectRatio": "20:14",
+        "aspectMode": "cover"
       },
-      {
-        "type": "text",
-        "text": "แชร์เข้ากลุ่มเป็นคู่เทพ",
-        "color": "#E2FF00FF",
-        "contents": []
-      }
-    ]
-  },
-  "footer": {
-    "type": "box",
-    "layout": "vertical",
-    "spacing": "md",
-    "position": "default",
-    "paddingTop": "sm",
-    "contents": [
-      {
-        "type": "button",
-        "action": {
-          "type": "uri",
-          "label": "แชร์เข้ากลุ่มเทพฟรี",
-          "uri": "https://liff.line.me/1655543836-wKeJMa99"
-        },
-        "style": "primary"
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "backgroundColor": "#ffff00",
+        "spacing": "sm",
+        "contents": [
+          {
+            "type": "text",
+            "text": text_2pick,
+            "weight": "bold",
+            "size": "xl",
+            "wrap": true,
+            "contents": []
+          },
+          {
+            "type": "text",
+            "text": text_3pick,
+            "weight": "regular",
+            "color": "#FF0000FF",
+            "align": "start",
+            "margin": "none",
+            "position": "relative",
+            "contents": []
+          }
+        ]
       },
-      {
-        "type": "button",
-        "action": {
-          "type": "uri",
-          "label": "เข้ากลุ่มไลฟ์คู่เทพ",
-          "uri": "https://linecorp.com"
-        },
-        "style": "secondary"
+      "footer": {
+        "type": "box",
+        "layout": "vertical",
+        "backgroundColor": "#ffff00",
+        "spacing": "sm",
+        "contents": [
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "แชร์เข้ากลุ่มไลฟ์ฟรี",
+              "uri": "https://bit.ly/3u5f6bc"
+            },
+            "style": "primary"
+          },
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "คลิกเข้ากลุ่มไลฟ์",
+              "uri": "https://bit.ly/2XIGYWB"
+            },
+            "margin": "none"
+          }
+        ]
       }
-    ]
-  }
+    },
+    {
+      "type": "bubble",
+      "hero": {
+        "type": "image",
+        "url": image_pick2,
+        "size": "full",
+        "aspectRatio": "20:14",
+        "aspectMode": "cover"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "backgroundColor": "#D7D7E2",
+        "spacing": "sm",
+        "contents": [
+          {
+            "type": "text",
+            "text": text_4pick,
+            "weight": "bold",
+            "size": "xl",
+            "align": "center",
+            "wrap": true,
+            "contents": []
+          },
+          {
+            "type": "text",
+            "text": text_5pick,
+            "contents": []
+          }
+        ]
+      },
+      "footer": {
+        "type": "box",
+        "layout": "vertical",
+        "backgroundColor": "#D7D7E2",
+        "spacing": "sm",
+        "contents": [
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "สมัครสมาชิกใหม่",
+              "uri": "http://bit.ly/789register"
+            },
+            "style": "primary"
+          },
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "ทางเข้าเล่น 789BT",
+              "uri": "https://slo999.com/789bet"
+            },
+	    "color": "#D6ED17FF",
+            "style": "secondary"
+          }
+        ]
+      }
+    }
+  ]
 }
 				
 				
