@@ -1,0 +1,43 @@
+.container {
+  background-color:black;
+  border-radius: 20px;
+  padding:20px;
+  max-width:600px;
+  margin:auto;
+  text-align:center;
+}
+
+.container h1 {
+  color : white;
+  font-size : 24px;
+}
+
+.container h2 {
+  color : yellow;
+  font-size : 20px;
+}
+
+#demo {
+  visibility: hidden;
+  top:30px;
+  color:gold;
+  font-size : 42px;
+}
+.ad{
+text-align: center;
+max-width:500px;
+padding:20px;
+margin:auto;
+}
+.share:link, .share:visited {
+  background-color: #00b900;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.share:hover, .share:active {
+  background-color: green;
+}
